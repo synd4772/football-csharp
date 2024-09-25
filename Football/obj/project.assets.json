@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\opilane\\source\\repos\\Football\\Football.csproj",
+      "projectUniqueName": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\Football.csproj",
       "projectName": "Football",
-      "projectPath": "C:\\Users\\opilane\\source\\repos\\Football\\Football.csproj",
+      "projectPath": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\Football.csproj",
       "packagesPath": "C:\\Users\\opilane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\opilane\\source\\repos\\Football\\obj\\",
+      "outputPath": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
