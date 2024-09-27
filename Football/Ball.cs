@@ -16,6 +16,7 @@ public class Ball
         _game = game; // Seob palli mänguga
         X = x; // Määrab X-koordinaadi
         Y = y; // Määrab Y-koordinaadi
+        this.Draw();
     }
 
     // Määrab palli kiirus
@@ -28,6 +29,8 @@ public class Ball
     // Liigutab palli vastavalt kiirusest
     public void Move()
     {
+        Console.SetCursorPosition((int)this.X, (int)this.Y);
+        Console.Write(" ");
         double newX = X + _vx; // Uus X-koordinaat
         double newY = Y + _vy; // Uus Y-koordinaat
         // Kontrollib, kas uus positsioon on staadionil
@@ -41,6 +44,16 @@ public class Ball
             _vx = 0; // Kui positsioon on vale, peatab X-kiirus
             _vy = 0; // Kui positsioon on vale, peatab Y-kiirus
         }
+        this.Draw();
     }
+    public void Draw()
+    {
+        ConsoleColor currColor = Console.ForegroundColor;
+        Console.ForegroundColor = ConsoleColor.Magenta;
 
+        Console.SetCursorPosition((int)this.X, (int)this.Y);
+        Console.Write("*");
+
+        Console.ForegroundColor = currColor;
+    }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace Football;
 
@@ -20,19 +21,28 @@ public class Player
 
     private Random _random = new Random(); // Juhuslike arvude genereerija
 
+    public ConsoleColor _color { get; private set; }
+
+    public char _sym { get; private set; }
+
     // Konstruktor, mis määrab mängija nime
     public Player(string name)
     {
         Name = name;
     }
+    public void SetSymbol(char sym)
+    {
+        this._sym = sym;
+    }
 
     // Üks teine konstruktor, mis määrab nime, asukoha ja meeskonna
-    public Player(string name, double x, double y, Team team)
+    public Player(string name, double x, double y, Team team, char sym)
     {
         Name = name;
         X = x;
         Y = y;
         Team = team;
+        this._sym = sym;
     }
 
     // Määrab mängija positsiooni
@@ -40,6 +50,22 @@ public class Player
     {
         X = x;
         Y = y;
+        this.Draw();
+    }
+
+    public void SetColor(ConsoleColor color)
+    {
+        this._color = color;
+    }
+
+    public void Draw()
+    {
+        ConsoleColor currColor = Console.ForegroundColor;
+        Console.ForegroundColor = _color;
+        Console.SetCursorPosition((int)this.X, (int)this.Y);
+        Console.Write(this._sym);
+        Console.ForegroundColor = currColor;
+
     }
 
     // Tagastab mängija absoluutse positsiooni
@@ -71,6 +97,8 @@ public class Player
     // Mängija liikumise meetod
     public void Move()
     {
+        Console.SetCursorPosition((int)this.X, (int)this.Y);
+        Console.Write(" ");
         // Kui mängija ei ole lähim palli mängija, peatab liikumise
         if (Team.GetClosestPlayerToBall() != this)
         {
@@ -102,5 +130,6 @@ public class Player
         {
             _vx = _vy = 0; // Kui positsioon on vale, peatab liikumise
         }
+        this.Draw();
     }
 }

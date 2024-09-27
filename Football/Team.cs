@@ -14,10 +14,13 @@ public class Team
     // Seotud mäng
     public Game Game { get; set; }
 
+    public ConsoleColor _color { get; set; }
+
     // Konstruktor, mis määrab meeskonna nime
-    public Team(string name)
+    public Team(string name, ConsoleColor color)
     {
         Name = name;
+        this._color = color;
     }
 
     // Mängu alustamine antud laiuse ja kõrgusega
@@ -27,10 +30,13 @@ public class Team
         // Määrab iga mängija positsiooni juhuslikult
         foreach (var player in Players)
         {
-            player.SetPosition(
+            Thread.Sleep(50);
+            player.SetSymbol(this.Name[0]);
+            player.SetPosition(  
                 rnd.NextDouble() * width,
                 rnd.NextDouble() * height
                 );
+ 
         }
     }
 
@@ -41,6 +47,7 @@ public class Team
         if (player.Team != null) return;
         Players.Add(player); // Lisab mängija meeskonda
         player.Team = this;   // Seob mängija selle meeskonnaga
+        player.SetColor(this._color);
     }
 
     // Tagastab palli positsiooni
