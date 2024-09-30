@@ -8,11 +8,13 @@
             string homeTeamName = "Gaimin Gladiators";
             string awayTeamName = "Team Spirit";
 
-            Stadium stad = new Stadium(90, 25, '#');
-            stad.Draw();
+            
 
             Team homeTeam = new Team(homeTeamName, ConsoleColor.Red);
             Team awayTeam = new Team(awayTeamName, ConsoleColor.Green);
+
+            Stadium stad = new Stadium(90, 25, '#', homeTeam, awayTeam);
+            stad.Draw();
 
             List<Team> teams = new List<Team>() { homeTeam, awayTeam };
             foreach (var team in teams)
@@ -22,13 +24,14 @@
                     team.AddPlayer(new Player($"{team.Name}:{i + 1}"));
                 }
             }
-
-            Game game = new Game(homeTeam, awayTeam, stad);
+            Score score = new Score(stad, homeTeam, awayTeam);
+            score.Draw();
+            Game game = new Game(homeTeam, awayTeam, stad, score);
 
             game.Start();
             while (true)
             {
-                Thread.Sleep(500);
+                
                 Console.SetCursorPosition(0, stad.Height + 1);
                 Console.Write($"render times: {count}");
                 count++;

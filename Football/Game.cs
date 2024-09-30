@@ -8,14 +8,18 @@ public class Game
     public Stadium Stadium { get; } // Staadion, kus mäng toimub
     public Ball Ball { get; private set; } // Mängupall
 
+    public Score Score { get; private set; }
+
+
     // Konstruktor, mis määrab kodu- ja külalismeeskonna ning staadioni
-    public Game(Team homeTeam, Team awayTeam, Stadium stadium)
+    public Game(Team homeTeam, Team awayTeam, Stadium stadium, Score score)
     {
         HomeTeam = homeTeam; // Kodu meeskonna määramine
         homeTeam.Game = this; // Seob meeskonna mänguga
         AwayTeam = awayTeam; // Külalismeeskonna määramine
         awayTeam.Game = this; // Seob meeskonna mänguga
         Stadium = stadium; // Staadioni määramine
+        this.Score = score;
     }
 
     // Mängu alustamine

@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C3706D2B-7F4E-449C-BAC4-BC509B79ECC4}|Football.csproj|c:\\users\\opilane\\source\\repos\\football-csharp\\football\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3706D2B-7F4E-449C-BAC4-BC509B79ECC4}|Football.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C3706D2B-7F4E-449C-BAC4-BC509B79ECC4}|Football.csproj|c:\\users\\opilane\\source\\repos\\football-csharp\\football\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3706D2B-7F4E-449C-BAC4-BC509B79ECC4}|Football.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3706D2B-7F4E-449C-BAC4-BC509B79ECC4}|Football.csproj|c:\\users\\opilane\\source\\repos\\football-csharp\\football\\score.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3706D2B-7F4E-449C-BAC4-BC509B79ECC4}|Football.csproj|solutionrelative:score.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3706D2B-7F4E-449C-BAC4-BC509B79ECC4}|Football.csproj|c:\\users\\opilane\\source\\repos\\football-csharp\\football\\stadium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3706D2B-7F4E-449C-BAC4-BC509B79ECC4}|Football.csproj|solutionrelative:stadium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3706D2B-7F4E-449C-BAC4-BC509B79ECC4}|Football.csproj|c:\\users\\opilane\\source\\repos\\football-csharp\\football\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C3706D2B-7F4E-449C-BAC4-BC509B79ECC4}|Football.csproj|c:\\users\\opilane\\source\\repos\\football-csharp\\football\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3706D2B-7F4E-449C-BAC4-BC509B79ECC4}|Football.csproj|solutionrelative:team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3706D2B-7F4E-449C-BAC4-BC509B79ECC4}|Football.csproj|c:\\users\\opilane\\source\\repos\\football-csharp\\football\\stadium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3706D2B-7F4E-449C-BAC4-BC509B79ECC4}|Football.csproj|solutionrelative:stadium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3706D2B-7F4E-449C-BAC4-BC509B79ECC4}|Football.csproj|c:\\users\\opilane\\source\\repos\\football-csharp\\football\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3706D2B-7F4E-449C-BAC4-BC509B79ECC4}|Football.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3706D2B-7F4E-449C-BAC4-BC509B79ECC4}|Football.csproj|c:\\users\\opilane\\source\\repos\\football-csharp\\football\\ball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,13 +46,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Score.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\Score.cs",
+              "RelativeDocumentMoniker": "Score.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\Score.cs",
+              "RelativeToolTip": "Score.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAIwCIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T11:20:08.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T07:45:06.883Z",
               "EditorCaption": ""
@@ -61,59 +78,59 @@
               "RelativeDocumentMoniker": "Stadium.cs",
               "ToolTip": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\Stadium.cs",
               "RelativeToolTip": "Stadium.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowCcAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAkwGEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T07:46:54.614Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Ball.cs",
               "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\Ball.cs",
               "RelativeDocumentMoniker": "Ball.cs",
               "ToolTip": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\Ball.cs",
               "RelativeToolTip": "Ball.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAIwCAAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T07:46:37.455Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\Game.cs",
               "RelativeDocumentMoniker": "Game.cs",
               "ToolTip": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\Game.cs",
               "RelativeToolTip": "Game.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAIwDcAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAuwBwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T07:45:59.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Team.cs",
               "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\Team.cs",
               "RelativeDocumentMoniker": "Team.cs",
               "ToolTip": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\Team.cs",
               "RelativeToolTip": "Team.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADQAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T07:45:07.967Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\Player.cs",
               "RelativeDocumentMoniker": "Player.cs",
               "ToolTip": "C:\\Users\\opilane\\source\\repos\\football-csharp\\Football\\Player.cs",
               "RelativeToolTip": "Player.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAEwG8AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAqwIYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T07:45:05.884Z",
               "EditorCaption": ""

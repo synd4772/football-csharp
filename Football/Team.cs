@@ -32,9 +32,24 @@ public class Team
         {
             Thread.Sleep(50);
             player.SetSymbol(this.Name[0]);
-            player.SetPosition(  
-                rnd.NextDouble() * width,
-                rnd.NextDouble() * height
+            double x, y;
+            while (true)
+            {
+                x = rnd.NextDouble() * width;
+                y = rnd.NextDouble() * height;
+                if (Game.Stadium.IsInGates((int)x, (int)y) is not null || !Game.Stadium.IsIn((double)x, (double)y))
+                {
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            player.SetPosition(
+                x,
+                y
                 );
  
         }

@@ -29,21 +29,31 @@ public class Ball
     // Liigutab palli vastavalt kiirusest
     public void Move()
     {
-        Console.SetCursorPosition((int)this.X, (int)this.Y);
-        Console.Write(" ");
+
+
         double newX = X + _vx; // Uus X-koordinaat
         double newY = Y + _vy; // Uus Y-koordinaat
-        // Kontrollib, kas uus positsioon on staadionil
-        if (_game.Stadium.IsIn(newX, newY))
+        Console.SetCursorPosition((int)this.X, (int)this.Y);
+        Console.Write(" ");        // Kontrollib, kas uus positsioon on staadionil
+        Team? team = _game.Stadium.IsInGates((int)newX, (int)newY);
+        if (team is not null)
+        {
+            this._game.Score.ChangeScore((Team)team);
+            this.X = this._game.Stadium.Width / 2;
+            this.Y = this._game.Stadium.Height / 2;
+        }
+        else if (_game.Stadium.IsIn(newX, newY))
         {
             X = newX; // Kui positsioon on sobiv, uuendab X-koordinaati
             Y = newY; // Kui positsioon on sobiv, uuendab Y-koordinaati
         }
         else
         {
-            _vx = 0; // Kui positsioon on vale, peatab X-kiirus
-            _vy = 0; // Kui positsioon on vale, peatab Y-kiirus
+            this.X = this._game.Stadium.Width / 2;
+            this.Y = this._game.Stadium.Height / 2;
+            this._game.Stadium.Draw();
         }
+
         this.Draw();
     }
     public void Draw()

@@ -62,9 +62,19 @@ public class Player
     {
         ConsoleColor currColor = Console.ForegroundColor;
         Console.ForegroundColor = _color;
-        Console.SetCursorPosition((int)this.X, (int)this.Y);
-        Console.Write(this._sym);
-        Console.ForegroundColor = currColor;
+        try
+        {
+            Console.SetCursorPosition((int)this.X, (int)this.Y);
+
+            Console.Write(this._sym);
+            Console.ForegroundColor = currColor;
+        }
+        catch (Exception e)
+        {
+            Console.SetCursorPosition(Team.Game.Stadium.Height + 3, 0);
+            Console.WriteLine($"{this.X}, {this.Y}");
+        }
+
 
     }
 
@@ -97,9 +107,17 @@ public class Player
     // Mängija liikumise meetod
     public void Move()
     {
-        Console.SetCursorPosition((int)this.X, (int)this.Y);
-        Console.Write(" ");
+        try
+        {
+            Console.SetCursorPosition((int)this.X, (int)this.Y);
+            Console.Write(" ");
+        }
+        catch
+        {
+
+        }
         // Kui mängija ei ole lähim palli mängija, peatab liikumise
+        
         if (Team.GetClosestPlayerToBall() != this)
         {
             _vx = 0;
@@ -119,17 +137,35 @@ public class Player
         var newX = X + _vx;
         var newY = Y + _vy;
         var newAbsolutePosition = Team.Game.GetPositionForTeam(Team, newX, newY);
+        while (true)
+        {
+            if (Team.Game.Stadium.IsIn(newAbsolutePosition.Item1, newAbsolutePosition.Item2) || Team.Game.Stadium.IsInGates((int)newAbsolutePosition.Item1, (int)newAbsolutePosition.Item2) is null || X <= 0 || Y <= 0)
+            {
+                X = newX; // Uus positsioon
+                Y = newY; // Uus positsioon
+                break;
+            }
+            else
+            {
+                Console.SetCursorPosition(Team.Game.Stadium.Width + 1, 4);
+                Console.Write($"{this.Name} is out");
+                Team.Game.Stadium.Draw();
+                Random rnd = new Random();
+                if (rnd.Next(2) == 2)
+                {
+                    X += rnd.Next(2);
+                }
+                else if(rnd.Next(1) == 1)
+                {
+                    X -= rnd.Next(2);
+                }
+                continue;
+                
+            }
+        }
 
         // Kontrollib, kas uus positsioon on staadionil
-        if (Team.Game.Stadium.IsIn(newAbsolutePosition.Item1, newAbsolutePosition.Item2))
-        {
-            X = newX; // Uus positsioon
-            Y = newY; // Uus positsioon
-        }
-        else
-        {
-            _vx = _vy = 0; // Kui positsioon on vale, peatab liikumise
-        }
+
         this.Draw();
     }
 }
